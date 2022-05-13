@@ -12,8 +12,21 @@ module.exports = {
     solidity: "0.7.3",
     networks: {
         mandala: {
-            url: process.env.MANDALA_PROVIDER,
-            accounts: [process.env.MANDALA_DEPLOYER],
+            url: "http://127.0.0.1:8545",
+            accounts: {
+                mnemonic:
+                    "fox sight canyon orphan hotel grow hedgehog build bless august weather swarm",
+                path: "m/44'/60'/0'/0",
+            },
+            chainId: 595,
+        },
+        mandalaPubDev: {
+            url: "https://tc7-eth.aca-dev.network",
+            accounts: {
+                mnemonic:
+                    "fox sight canyon orphan hotel grow hedgehog build bless august weather swarm",
+                path: "m/44'/60'/0'/0",
+            },
             chainId: 595,
         },
     },
